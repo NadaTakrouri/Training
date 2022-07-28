@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<head>
+
+<script src="https://kit.fontawesome.com/751bf41b44.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="responsive.css">
+</head>
+<html>
+<body>
+    <!--------------------------HEADER------------------------------------>
+    <div class="header">
+       <!--div class="icon1">
+            <i class="fa-brands fa-facebook-f" style="padding-right: 8px;"></i>
+            <i class="fa-brands fa-pinterest" style="padding-right: 8px;"></i>
+            <i class="fa-brands fa-glide-g"></i>
+        </div>-->
+
+        <h1 id="Tittle">NADA</h1>
+    </div>
+      <!--  <div class="ul">
+            <ul>
+                <li style="padding-left:40%;padding-top:1%;font-size: 15px;"><a
+                        href="https://www.w3schools.com/html/html_emojis.asp">HOME</a></li>
+                <li style="padding-left:2%;padding-top:1%;font-size: 15px;"><a
+                        href="https://www.w3schools.com/html/html_lists_unordered.asp">ABOUT US</a></li>
+                <li style="padding-left:2%;padding-top:1%;font-size: 15px;"><a
+                        href="https://www.w3schools.com/html/html_emojis.asp">SOURCES</a></li>
+                <li style="padding-left:2%;padding-top:1%;font-size: 15px;"><a
+                        href="https://www.w3schools.com/html/html_lists_unordered.asp">CONECT</a></li>
+            </ul>
+        </div>-->
+
+        <div class="navbar">
+            <a href="https://www.w3schools.com/html/html_emojis.asp">HOME</a>
+            <a href="https://www.w3schools.com/html/html_lists_unordered.asp">ABOUT US</a>
+            <a href="https://www.w3schools.com/html/html_emojis.asp">SOURCES</a>
+            <a href="https://www.w3schools.com/html/html_lists_unordered.asp">CONECT</a>
+          </div>
+
+        <br>
+        <br>
+ 
+    <!--------------------------------------------------------------------------------->
+<div class="flex-container">
+    
+       
+            <div class="transbox">
+                <p style="color: rgb(0, 0, 0);font-size:30px;top:20%;"> Register Form</p>
+                <form>
+                    <label type="L" for="name">Name</label><br>
+                    <input type="text1" id="name" name="name"><br><br>
+                    <span id="namefield"></span>
+                    <label type="L" for="Email">Email</label><br>
+                    <input type="text1" id="Email" name="Email"><br><br>
+                    <span id="emailfield"></span>
+                    <label type="L" for="psw">Password</label><br>
+                    <div>
+                        <input type="password" id="psw" name="psw">
+                        <span onclick="eyep1()">
+                            <i class="fa fa-eye" id="eye"></i>
+                            <i class="fa fa-eye-slash" id="eye2"></i>
+                        </span>
+                        <span id="passfield"></span>
+                    </div>
+                    <br>
+
+                    <label type="L" for="psw1">Password Confirmation</label><br>
+                    <div>
+                        <input type="password" id="psw1" names="cpsw">
+                        <span id="span1" onclick="eyep2()">
+                            <i class="fa fa-eye" id="eye1"></i>
+                            <i class="fa fa-eye-slash" id="eye21"></i>
+                        </span>
+                        <span id="passcfield"></span>
+                    </div>
+                    <input class="sub" type="button" value="Submit" id="sb" onclick="check()">
+                </form>
+             </div>
+    <!--------------------------- CALCULETER---------------------------------------->
+        <!--<table class="table">
+            <tr>
+                <td colspan="3"> <input class="display-box" type="text" id="display" disabled /> </td>
+                <td><input class="button" type="button" value="C" onclick="clearS()"> </td>
+
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="1" onclick="display('1')" /></td>
+                <td><input class="button" type="button" value="2" onclick="display('2')" /></td>
+                <td><input class="button" type="button" value="3" onclick="display('3')" /></td>
+                <td><input class="button" type="button" value="=" onclick="calculate()" /></td>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="4" onclick="display('4')" /></td>
+                <td><input class="button" type="button" value="5" onclick="display('5')" /></td>
+                <td><input class="button" type="button" value="6" onclick="display('6')" /></td>
+                <td><input class="button" type="button" value="-" onclick="display('-')" /></td>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="7" onclick="display('7')" /></td>
+                <td><input class="button" type="button" value="8" onclick="display('8')" /></td>
+                <td><input class="button" type="button" value="9" onclick="display('9')" /></td>
+                <td><input class="button" type="button" value="*" onclick="display('*')" /></td>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="." onclick="display('.')"></td>
+                <td><input class="button" type="button" value="0" onclick="display('0')" /></td>
+                <td><input class="button" type="button" value="/" onclick="display('/')" /></td>
+                <td><input class="button" type="button" value="+" onclick="display('+')" /></td>
+            </tr>
+        </table>-->
+    
+   <!--------------------------- NEW CALCULETER---------------------------------------->
+
+    <div class="container">
+     <div id="display"></div>
+        <div class="divall">
+        <input type="button" class="button" value="1" onclick="display('1')">
+        <input type="button" class="button" value="2" onclick="display('2')">
+        <input type="button" class="button" value="3" onclick="display('3')">
+        <input type="button" class="button" value="+" onclick="display('+')">
+        </div>
+        <div class="divall">
+        <input type="button" class="button" value="4" onclick="display('4')">
+        <input type="button" class="button" value="5" onclick="display('5')">
+        <input type="button" class="button" value="6" onclick="display('6')">
+        <input type="button" class="button" value="-" onclick="display('-')">
+        </div>
+        <div class="divall">
+        <input type="button" class="button" value="7" onclick="display('7')">
+        <input type="button" class="button" value="8" onclick="display('8')">
+        <input type="button" class="button" value="9" onclick="display('9')">
+        <input type="button" class="button" value="*" onclick="display('*')">
+        </div>
+        <div class="divall">
+        <input type="button" class="button" value="C" onclick="clearS()">
+        <input type="button" class="button" value="0"onclick="display('0')">
+        <input type="button" class="button" value="="onclick="calculate()">
+        <input type="button" class="button" value="/"onclick="display('/')" >
+        </div>
+    </div>
+
+    <!--------------------------------LIST--------------------------------------------->
+
+    
+    <div class="transboxList">
+            <p id="pl">You Can Search For A User data By It's Name...</p>
+            <form>
+                <input id="thefilter" name="search" onkeyup="listsearch()" placeholder="Search..">
+            </form>
+            <table id="table">
+                <tr id="tr">
+                    <th style="color:rgb(100, 70, 34);" id="th">Name</th>
+                    <th style="color:rgb(100, 70, 34);" id="th">Eamil</th>
+                </tr>
+                <tbody id="insertionPoint">
+                </tbody>
+            </table>
+    </div>
+  
+</div>
+        <!---------------------------------FOOTEER------------------------------->
+
+
+ <div class="footer">
+            <p id="pF1"> OUR SERVICES</p>
+            <p id="pF2">Lorem ipsum dolor sit amet , consectetur adipisicing elit . Dolores quae porro consequatur aliquam, incidunt elus magni provident.</p>
+            <p id="pF3"> doloribus omnis minus ovident,doloribus omnis minus temporibus perferendis nesciunt...</p>
+    </di>
+
+<script src="responsive.js"></script>
+</body>
+</html>
