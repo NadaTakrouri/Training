@@ -178,7 +178,7 @@ function check(){
         flag = "False";
         passempty.textContent = "*Missed A Number";
 
-    } else if (!(Pasval1.length >= 8)){
+    } else if (!(Pasval1.length >= 5)){
         flag = "False";
         passempty.textContent = "*Letters Are Not Enough";
     } 
@@ -193,7 +193,7 @@ function check(){
 
     if(flag == "True"){
         var table =  document.getElementById("insertionPoint").innerHTML += "<tr id=tr><td id=td>" + name + "</td><td id=td>" + username + "</td><td id=td>" + Email + "</td><td id=td>" + Street + "</td><td id=td>" + suite + "</td><td id=td>" +city+ "</td><td id=td>" +zipcode+ "</td><td id=td>" + phone + "</td><td id=td>" + website + "</td><td id=td>" + company+ "</td></tr>";
-        arr.push(name,Email);
+        arr.push(name,username,Email,Street,suite,city,zipcode,phone,website,company);
         document.getElementById("psw").value="";
         document.getElementById("psw1").value="";
         document.getElementById("name").value="";
@@ -227,4 +227,66 @@ function listsearch (){
             table2[(i/2)+1].style.display = "none";
         } 
     } 
+}
+
+//---------------------- JSON ------------------------------------------------------------//
+
+function FetchD() {
+    fetch('https://jsonplaceholder.typicode.com/users').then((response)=> {
+        if(!response.ok){
+          throw new error (response.status);
+        }
+        return response.json();
+       })
+       .then((data)=>{
+          let Dataj = document.getElementById("insertionPoint");
+          for(let i=0; i<data.length;i++){
+            let alldata = document.createElement("tr");
+            let Ndata = document.createElement("td");
+            let UNdata = document.createElement("td");
+            let Edata = document.createElement("td");
+            let Sdata = document.createElement("td");
+            let SUdata = document.createElement("td");
+            let Cdata = document.createElement("td");
+            let Zdata = document.createElement("td");
+            let Pdata = document.createElement("td");
+            let Wdata = document.createElement("td");
+            let Codata = document.createElement("td");
+            let namedata = document.createTextNode(data[i].name);
+            let usernamedata = document.createTextNode(data[i].username);
+            let emaildata = document.createTextNode(data[i].email);
+            let streetdata = document.createTextNode(data[i].address[0]);
+            let suitedata = document.createTextNode(data[i].address[1]);
+            let citydata = document.createTextNode(data[i].address[2]);
+            let zipcodedata = document.createTextNode(data[i].address[3]);
+            let phonedata = document.createTextNode(data[i].phone);
+            let websitedata = document.createTextNode(data[i].website);
+            let companynamedata = document.createTextNode(data[i].company[0]);
+
+            Ndata.append(namedata);
+            UNdata.append(usernamedata);
+            Edata.append(emaildata );
+            Sdata.append(streetdata );
+            SUdata.append(suitedata);
+            Cdata.append(citydata); 
+            Zdata.append(zipcodedata );
+            Pdata.append(phonedata);
+            Wdata.append(websitedata);
+            Codata.append(companynamedata);
+            alldata.append(
+                Ndata,
+                UNdata,
+                Edata,
+                Sdata,
+                SUdata,
+                Cdata,
+                Zdata,
+                Pdata,
+                Wdata,
+                Codata
+                );
+          
+          Dataj.append(alldata);
+            }
+       })
 }
