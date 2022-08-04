@@ -255,13 +255,13 @@ function FetchD() {
             let namedata = document.createTextNode(data[i].name);
             let usernamedata = document.createTextNode(data[i].username);
             let emaildata = document.createTextNode(data[i].email);
-            let streetdata = document.createTextNode(data[i].address[0]);
-            let suitedata = document.createTextNode(data[i].address[1]);
-            let citydata = document.createTextNode(data[i].address[2]);
-            let zipcodedata = document.createTextNode(data[i].address[3]);
+            let streetdata = document.createTextNode(data[i].address.street);
+            let suitedata = document.createTextNode(data[i].address.suite);
+            let citydata = document.createTextNode(data[i].address.city);
+            let zipcodedata = document.createTextNode(data[i].address.zipcode);
             let phonedata = document.createTextNode(data[i].phone);
             let websitedata = document.createTextNode(data[i].website);
-            let companynamedata = document.createTextNode(data[i].company[0]);
+            let companynamedata = document.createTextNode(data[i].company.name);
 
             Ndata.append(namedata);
             UNdata.append(usernamedata);
