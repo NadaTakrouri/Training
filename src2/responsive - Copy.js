@@ -214,22 +214,7 @@ function check(){
        }
 
 } 
-
-//-------------------- Search --------------------------------------------------------------//
-function listsearch (){
-    var table2 = document.getElementById("table").getElementsByTagName("tr");
-    var input = document.getElementById("thefilter").value;
-    for(var i = 0; i < arr.length ; i=i+2){
-        if((arr[i]).includes(input)){
-            table2[(i/2)+1].style.display = ""; 
-        }
-        else {
-            table2[(i/2)+1].style.display = "none";
-        } 
-    } 
-}
-
-//---------------------- JSON ------------------------------------------------------------//
+//---------------------- JSON Fetch ------------------------------------------------------------//
 
 function FetchD() {
     fetch('https://jsonplaceholder.typicode.com/users').then((response)=> {
@@ -242,50 +227,41 @@ function FetchD() {
           let Dataj = document.getElementById("insertionPoint");
           for(let i=0; i<data.length;i++){
             let alldata = document.createElement("tr");
-            let Ndata = document.createElement("td");
-            let UNdata = document.createElement("td");
-            let Edata = document.createElement("td");
-            let Sdata = document.createElement("td");
-            let SUdata = document.createElement("td");
-            let Cdata = document.createElement("td");
-            let Zdata = document.createElement("td");
-            let Pdata = document.createElement("td");
-            let Wdata = document.createElement("td");
-            let Codata = document.createElement("td");
-            let namedata = document.createTextNode(data[i].name);
-            let usernamedata = document.createTextNode(data[i].username);
-            let emaildata = document.createTextNode(data[i].email);
-            let streetdata = document.createTextNode(data[i].address.street);
-            let suitedata = document.createTextNode(data[i].address.suite);
-            let citydata = document.createTextNode(data[i].address.city);
-            let zipcodedata = document.createTextNode(data[i].address.zipcode);
-            let phonedata = document.createTextNode(data[i].phone);
-            let websitedata = document.createTextNode(data[i].website);
-            let companynamedata = document.createTextNode(data[i].company.name);
-            Ndata.append(namedata);
-            UNdata.append(usernamedata);
-            Edata.append(emaildata );
-            Sdata.append(streetdata );
-            SUdata.append(suitedata);
-            Cdata.append(citydata); 
-            Zdata.append(zipcodedata );
-            Pdata.append(phonedata);
-            Wdata.append(websitedata);
-            Codata.append(companynamedata);
-            alldata.append(
-                Ndata,
-                UNdata,
-                Edata,
-                Sdata,
-                SUdata,
-                Cdata,
-                Zdata,
-                Pdata,
-                Wdata,
-                Codata
-                );
-          
+            let arrdata= [data[i].name , data[i].username ,data[i].email,
+                           data[i].address.street,data[i].address.suite,data[i].address.city,
+                           data[i].address.zipcode,data[i].phone, data[i].website,data[i].company.name];
+            arr.push(data[i].name , data[i].username ,data[i].email,
+                data[i].address.street,data[i].address.suite,data[i].address.city,
+                data[i].address.zipcode,data[i].phone, data[i].website,data[i].company.name);
+                for( let j = 0; j<arrdata.length; j++){
+                    let newelement = document.createTextNode(arrdata[j]);
+                    let newdata = document.createElement("td");
+                    newdata.setAttribute("id","td");
+                    newdata.append(newelement);
+                    alldata.append(newdata);
+                }
           Dataj.append(alldata);
+       
             }
        })
+       .catch((error) => {
+        const p = document.createElement("p");
+        p.appendChild(document.createTextNode(`Error: ${error.message}`));
+        alert(p); });
+      
+}
+
+
+//-------------------- Search --------------------------------------------------------------//
+function listsearch (){
+    var table2 = document.getElementById("table").getElementsByTagName("tr");
+    var input = document.getElementById("thefilter").value;
+    for(var i = 0; i < arr.length ; i=i+10){
+        if((arr[i]).includes(input)){
+            table2[(i/10)+1].style.display = ""; 
+        }
+        else {
+            table2[(i/10)+1].style.display = "none";
+        } 
+    } 
 }
