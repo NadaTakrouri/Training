@@ -13,6 +13,8 @@ function display(value) {
     document.getElementById("display").innerHTML += value;
 }
 
+
+
 function calculate() {
     var x = document.getElementById("display").innerHTML;
     var y = eval(x);

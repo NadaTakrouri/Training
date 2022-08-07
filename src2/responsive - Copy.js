@@ -172,7 +172,7 @@ function check(){
     }
     else if(!Pasval1.match("[A-Z]")){
         flag = "False";
-        passempty.textContent = "*Missed A Capital Letter";
+        passempty.textContent = "*Missed A Capital Letterrr";
     }
     else if (!Pasval1.match("[0-9]")){
         flag = "False";
