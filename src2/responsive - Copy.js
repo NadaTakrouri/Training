@@ -172,11 +172,11 @@ function check(){
     }
     else if(!Pasval1.match("[A-Z]")){
         flag = "False";
-        passempty.textContent = "*Missed A Capital Letter";
+        passempty.textContent = "*Missed A Capital Letterr";
     }
     else if (!Pasval1.match("[0-9]")){
         flag = "False";
-        passempty.textContent = "*Missed A Number";
+        passempty.textContent = "*Missed A Numberr";
 
     } else if (!(Pasval1.length >= 5)){
         flag = "False";
