@@ -39,7 +39,7 @@ const List = () => {
         <ol>
             {
             AddToList.map( (tasks) => {
-               return <li key={tasks}> {tasks} </li>;
+               return <li key={Math.random()*10}> {tasks} </li>;
             })
         }
         </ol>
