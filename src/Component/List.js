@@ -39,7 +39,7 @@ const List = () => {
         <ol>
             {
             AddToList.map( (tasks) => {
-               return <li> {tasks}</li>;
+               return <li key={tasks}> {tasks} </li>;
             })
         }
         </ol>
