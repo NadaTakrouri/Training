@@ -36,7 +36,7 @@ const List = () => {
 <div>
     <div className='ListBoxStyle'>
         <input className='input' type="text" placeholder="Enter New Task" value={Listinput} onChange={TakeValue} onKeyDown={EnterKey}/>
-        <button className='ButtonStyle' onClick={AddTasks}>ADD</button>
+        <button className='addButton' onClick={AddTasks}>ADD</button>
        
             {
             AddToList.map( (tasks) => {

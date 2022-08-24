@@ -1,14 +1,15 @@
 .ListBoxStyle{
     border: 2px solid none;
     height: 600px;
-    box-shadow: 2px 3px 20px 10px rgb(130, 130, 130);
-    background-color:rgb(140, 189, 167);
+    box-shadow:  1px 1px 50px 10px rgb(183, 178, 178);
+    background-color:rgb(179, 198, 204);
     opacity: 1;
     border-radius: 1em;
     width:500px;
     margin-top:5%;
     margin-left: 35%;
     font-family:cursive;
+    border: 1px solid rgb(57, 56, 56);
 
 }
 @media screen and (max-width:500px){
@@ -40,34 +41,36 @@
   
 }
 
-.ButtonStyle{
-    width: 18%;
+.addButton{
+    width: 19%;
     height: 10%;
     border: 1px;
-    background-color: rgb(130, 130, 130);
+    background-color: rgb(156, 152, 152);
     border-radius: 50%;
     margin-top: 7%;
     font-size: 20px;
     font-weight: 500;
     color: #000000;
     font-family:cursive;
+    border: 1px solid rgb(57, 56, 56);
 
  }
 
 
  .DeleteButton {
-    width: 15%;
+    width:430px;
     height:35px;
     border: 1px;
-    background-color: rgb(130, 130, 130);
+    background-color:rgb(156, 152, 152);
     font-size: 20px;
     font-weight: 500;
     color: #000000;
-    margin-left: 43%;
+    margin-left:37%;
     margin-top: 1%;
     margin-bottom: 5%;
     border-radius: 5px;
     font-family:cursive;
+    border: 1px solid rgb(57, 56, 56);
  
 }
 
@@ -84,7 +87,7 @@ input[type=checkbox] {
     margin-top: 5%;
     margin-left: 4%;
     transform: scale(1.4);
-    accent-color: rgb(207, 79, 141);
+    accent-color: rgb(246, 212, 223);
 
 }
 

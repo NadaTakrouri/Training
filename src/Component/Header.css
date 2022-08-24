@@ -1,10 +1,10 @@
 .HeaderStyle {
-    background-color:  rgb(123, 174, 152);
+    background-color:rgb(179, 198, 204);
     padding: 0.5%;
     width: 100%;
     margin-left: 0;
     margin-right: 0;
-    box-shadow: 2px 3px 20px 10px rgb(130, 130, 130);
+    box-shadow: 2px 3px 40px 10px rgb(175, 172, 172);
     height: 150px;
 }
 
