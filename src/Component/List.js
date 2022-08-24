@@ -1,6 +1,7 @@
 import './List.css';
 import { useState } from 'react';
 
+
 const List = () => {
 
 
@@ -34,15 +35,21 @@ const List = () => {
  return (
 <div>
     <div className='ListBoxStyle'>
-        <input type="text" placeholder="Enter New Task" value={Listinput} onChange={TakeValue} onKeyDown={EnterKey}/>
+        <input className='input' type="text" placeholder="Enter New Task" value={Listinput} onChange={TakeValue} onKeyDown={EnterKey}/>
         <button className='ButtonStyle' onClick={AddTasks}>ADD</button>
-        <ol>
+       
             {
             AddToList.map( (tasks) => {
-               return <li key={Math.random()*10}> {tasks} </li>;
+
+                return (
+                <div>
+                    <input className="Check" key={Math.random()*10} type="checkbox"/>
+                    <span>{tasks}</span>
+               </div>
+                )
             })
         }
-        </ol>
+  
     </div>
      <button className='DeleteButton ' onClick={DeleteTasks}> Delete Your Tasks</button>
  
