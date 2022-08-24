@@ -43,7 +43,7 @@ const List = () => {
 
                 return (
                 <div>
-                    <input className="Check" key={Math.random()*10} type="checkbox"/>
+                    <input key={Math.random()*10} type="checkbox"/>
                     <span>{tasks}</span>
                </div>
                 )
