@@ -1,0 +1,106 @@
+.ListBoxStyle{
+    border: 2px solid none;
+    height: 600px;
+    box-shadow:  1px 1px 50px 10px rgb(183, 178, 178);
+    background-color:rgb(179, 198, 204);
+    opacity: 1;
+    border-radius: 1em;
+    width:500px;
+    margin-top:5%;
+    margin-left: 35%;
+    font-family:cursive;
+    border: 1px solid rgb(57, 56, 56);
+
+}
+@media screen and (max-width:500px){
+    .ListBoxStyle{
+      justify-content: center;
+      height: 480px;
+      width:90%;
+      padding-bottom: 10px;
+      margin-left: 5%;
+      margin-right: 0.5%;
+     
+    }
+  }
+
+.input{
+	padding: 15px;
+	text-align: left;
+	height: 25px;
+	border: none;
+	background: transparent;
+	font-size:18px;
+	font-weight: 500;
+	width: 60%;
+	border-bottom: 2px solid  rgb(130, 130, 130);
+	outline: none;
+	margin-right: 50px;
+    color: #000000;
+    font-family:cursive;
+  
+}
+
+.addButton{
+    width: 19%;
+    height: 10%;
+    border: 1px;
+    background-color: rgb(156, 152, 152);
+    border-radius: 50%;
+    margin-top: 7%;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+    font-family:cursive;
+    border: 1px solid rgb(57, 56, 56);
+
+ }
+
+
+ .DeleteButton {
+    width:430px;
+    height:35px;
+    border: 1px;
+    background-color:rgb(156, 152, 152);
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+    margin-left:37%;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    border-radius: 5px;
+    font-family:cursive;
+    border: 1px solid rgb(57, 56, 56);
+ 
+}
+
+@media screen and (max-width:500px) {
+    .DeleteButton{
+        width:90%;
+        margin-left: 5%;
+        margin-top: 5%;
+
+    }
+}
+
+input[type=checkbox] {
+    margin-top: 5%;
+    margin-left: 4%;
+    transform: scale(1.4);
+    accent-color: rgb(246, 212, 223);
+
+}
+
+span{
+    font-size: 18px;
+    padding-left: 7px;
+    margin-top: 5%;
+
+}
+
+
+.checked-item {
+  text-decoration: line-through;
+  text-decoration-color: rgb(221, 148, 171);
+  text-decoration-thickness:10% ;
+}
